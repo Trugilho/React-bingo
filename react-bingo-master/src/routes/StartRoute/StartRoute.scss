@@ -1,0 +1,101 @@
+@import "../../styles/mixins";
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.StartRoute {
+  user-select: none;
+  text-align: center;
+  line-height: 2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  .Title {
+    line-height: normal;
+
+    .CheeseyText {
+      font-size: 5rem;
+      text-shadow: #af9800 0 0.1em 0;
+      color: #fff900;
+
+      @include media-query(min) {
+        font-size: 2rem;
+      }
+
+      @include media-query(small) {
+        font-size: 3rem;
+      }
+    }
+
+    .BingoText {
+      font-size: 7rem;
+      margin-top: 2rem;
+      text-shadow: #04bbff 0 0.1em 0;
+      color: #00f2ff;
+
+      @include media-query(min) {
+        font-size: 2.8rem;
+      }
+
+      @include media-query(small) {
+        font-size: 4.2rem;
+      }
+    }
+  }
+
+  .Introduction {
+
+    .Credits {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .Coin {
+        background-image: url("/coin.gif");
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-left: 10px;
+        background-position: center;
+        background-size: 400%;
+        display: inline-block;
+      }
+    }
+
+    .Instructions {
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .PressStart {
+      margin-top: 60px;
+      line-height: 1rem;
+      animation: blink 1s linear infinite;
+      cursor: pointer;
+    }
+
+    &.empty {
+      .Instructions {
+        animation: blink 2s linear infinite;
+      }
+
+      .PressStart {
+        opacity: 0;
+        animation: none;
+      }
+    }
+  }
+}

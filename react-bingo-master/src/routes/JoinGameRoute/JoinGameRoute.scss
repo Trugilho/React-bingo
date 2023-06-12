@@ -1,0 +1,54 @@
+@import "../../styles/mixins";
+
+.JoinGameRoute {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .RouteTitle {
+    grid-area: route-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    line-height: 4rem;
+    padding-top: 5rem;
+  }
+
+  .RouteContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .JoinGame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .GameId {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background: #34353d;
+    border: 0;
+    text-align: center;
+    color: white;
+    outline: none;
+    padding: 2rem 1rem;
+  }
+
+  .JoinGameButton {
+    margin-top: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    &:hover {
+      background: #3a3a3a;
+    }
+  }
+}

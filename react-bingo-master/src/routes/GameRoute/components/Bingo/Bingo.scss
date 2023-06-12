@@ -1,0 +1,52 @@
+@import "../../../../styles/variables";
+
+@keyframes danceBitch {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Scorecard {
+  border-radius: 20px;
+  flex: 1;
+
+  &-title {
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 4rem;
+    margin: 20px -6rem 0 0;
+    font-weight: 900;
+  }
+
+  &.completed {
+    .EmojiSquare {
+      span {
+        animation: danceBitch 1s linear infinite;
+      }
+    }
+  }
+}
+
+.Bingo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 1fr;
+  margin: 20px;
+  grid-gap: 4px;
+  border: 4px solid #ffffff;
+  background: white;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  .Square {
+    //border-right: none;
+    //border-top: none;
+    color: white;
+    background: $grey-dark;
+  }
+}

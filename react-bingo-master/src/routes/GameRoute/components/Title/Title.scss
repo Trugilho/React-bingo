@@ -1,0 +1,12 @@
+.Title {
+  &__character {
+    user-select: none;
+    cursor: pointer;
+
+    &--inverted {
+      @extend .Title__character;
+      display: inline-block;
+      transform: scale(-1, 1);
+    }
+  }
+}
